@@ -9,6 +9,9 @@ class Student(models.Model):
     address = models.TextField(null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class Car(models.Model):
     car_name = models.CharField(max_length=50)
